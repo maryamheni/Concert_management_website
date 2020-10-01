@@ -1,0 +1,11 @@
+{% extends 'form/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<h1>Home page</h1>
+<form method="POST">
+    {% csrf_token %}
+    <legend>Submit Your Application</legend>
+       {{form|crispy}}
+    <button class="btn btn-outline-info" type="submit">Send Application</button>
+</form>
+{% endblock content %}
